@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\BasicShapes">
+      <UniqueIdentifier>{66c9fc50-7140-4fe9-a113-956bb643633d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BuilderPattern">
+      <UniqueIdentifier>{edd0cbfb-894e-479a-bfa3-e3db320617ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BuilderPattern">
+      <UniqueIdentifier>{da2ca5fd-45ab-46b0-8fef-f1b9d2ab0e3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FactoryPattern">
+      <UniqueIdentifier>{6612eca4-c854-4191-b5dc-e1d730193457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FactoryPattern">
+      <UniqueIdentifier>{4ac7c1e3-b280-4c94-92ed-2af4cce048e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SingletonPattern">
+      <UniqueIdentifier>{9af73291-a0e7-4dd2-9234-b18ebca08e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Singleton">
+      <UniqueIdentifier>{e9756927-b052-4d3b-9d5d-8629ebca244f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Prototype And MethodFactory">
+      <UniqueIdentifier>{c7caf150-b509-4747-b0c4-e8d722417edc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Prototype And MethodFactory">
+      <UniqueIdentifier>{b181aa0a-4e11-4dd2-8871-640a4b3c1c5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircle.cpp">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CSquare.cpp">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CHexagon.cpp">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="COctagon.cpp">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayCharacterDecoderBuilder.cpp">
+      <Filter>Source Files\BuilderPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayNumberDecoderBuilder.cpp">
+      <Filter>Source Files\BuilderPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterArrayReader.cpp">
+      <Filter>Source Files\BuilderPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CBasicFactory.cpp">
+      <Filter>Source Files\FactoryPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CBasicFactoryExtended.cpp">
+      <Filter>Source Files\FactoryPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CFactoryMaker.cpp">
+      <Filter>Source Files\FactoryPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CSingleton.cpp">
+      <Filter>Source Files\Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="CPrototype.cpp">
+      <Filter>Source Files\Prototype And MethodFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="CAdvancedPrototype.cpp">
+      <Filter>Source Files\Prototype And MethodFactory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IShape.h">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CCircle.h">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CSquare.h">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CHexagon.h">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="FriendClassHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="COctagon.h">
+      <Filter>Header Files\BasicShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="IAbstractFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayDecoderBuilder.h">
+      <Filter>Header Files\BuilderPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayCharacterDecoderBuilder.h">
+      <Filter>Header Files\BuilderPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayNumberDecoderBuilder.h">
+      <Filter>Header Files\BuilderPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterArrayReader.h">
+      <Filter>Header Files\BuilderPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CBasicFactory.h">
+      <Filter>Header Files\FactoryPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CBasicFactoryExtended.h">
+      <Filter>Header Files\FactoryPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CFactoryMaker.h">
+      <Filter>Header Files\FactoryPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CSingleton.h">
+      <Filter>Header Files\SingletonPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CPrototype.h">
+      <Filter>Header Files\Prototype And MethodFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="CAdvancedPrototype.h">
+      <Filter>Header Files\Prototype And MethodFactory</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
