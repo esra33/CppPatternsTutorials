@@ -4,13 +4,8 @@ CSingleton::CSingleton() : m_pMessage(NULL) {}
 
 CSingleton* CSingleton::Instance()
 {
-	static CSingleton* pInstance;
-	if(pInstance == NULL) 
-	{
-		pInstance = new CSingleton();
-	}
-
-	return pInstance;
+	static CSingleton pInstance;
+	return &pInstance;
 }
 
 const char* CSingleton::GetMessage()

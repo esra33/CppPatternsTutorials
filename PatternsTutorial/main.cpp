@@ -5,6 +5,8 @@
 #include "ArrayNumberDecoderBuilder.h"
 #include "ArrayCharacterDecoderBuilder.h"
 #include "CAdvancedPrototype.h"
+#include "CString.h"
+#include "objectPool.h"
 #include <iostream>
 #include <stdio.h>
 
@@ -16,13 +18,16 @@ public:
 
 	CFunctionPair(char _name[32], void (*_function) (void)) : function(_function)
 	{
-		memset(name, 0, strlen(name));
-		memcpy(name, _name, strlen(_name));
+		short _size = strlen(_name);
+		memcpy(name, _name, _size);
+		if(_size < 32) {
+			name[_size] = '\0';
+		}
 	}
 
 	~CFunctionPair()
 	{
-		delete []name;
+		function = NULL;
 	}
 };
 
@@ -96,11 +101,27 @@ void BuilderPatternInstance()
 }
 void PrototypePatternInstance()
 {
+	// using the builder pattern -->http://www.oodesign.com/prototype-pattern.html
 	CAdvancedPrototype* prototype = new CAdvancedPrototype(5,"NuevoPrototipo", 0xFF0FF000, true);
 	CPrototype* prototypeClone = prototype->Clone();
 	prototypeClone->PrintPrototype();
 	delete prototype;
 	delete prototypeClone;
+}
+
+void ObjectPoolPattern()
+{
+	// statical declaration for memory management
+	CObjectPool<CString> objectPool = CObjectPool<CString>(-1);
+	CString* string = objectPool.GetInstance();
+	string->Flush();
+	string->Set("Hola Mundo");
+	objectPool.Release(&string);
+	CString* string2 = objectPool.GetInstance();
+	string2->Flush();
+	string2->Set("Es un nuevo mundo");
+	string2->Flush();
+	objectPool.Release(&string2);
 }
 
 int main()
@@ -111,7 +132,8 @@ int main()
 		new CFunctionPair("1.Factory_Instance", FactoryPatternInstance), 
 		new CFunctionPair("2.Abstract_Factory", ExtendedFactoryPatternInstance), 
 		new CFunctionPair("3.Builder_Instance", BuilderPatternInstance),
-		new CFunctionPair("4.Prototype_Instance", PrototypePatternInstance)
+		new CFunctionPair("4.Prototype_Instance", PrototypePatternInstance),
+		new CFunctionPair("5.Object_Pool_Instance", ObjectPoolPattern)
 	};
 
 	short selection = 0;
@@ -136,6 +158,12 @@ int main()
 		std::cin >> answer;
 		selection = (answer == 'Y' || answer == 'y')? 0 : -1;
 		system("CLS");
+	}
+
+	// Clean memory
+	for(short i = 0; i < _size; i++)
+	{
+		delete pairs[i];
 	}
 
 	return 0;

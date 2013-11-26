@@ -40,6 +40,12 @@
     <Filter Include="Header Files\Prototype And MethodFactory">
       <UniqueIdentifier>{b181aa0a-4e11-4dd2-8871-640a4b3c1c5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ObjectPoolPattern">
+      <UniqueIdentifier>{54cb1b93-af76-4049-94a1-58d20155ab0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ObjectPoolPattern">
+      <UniqueIdentifier>{ac3e5a6a-968d-4299-ad69-32fbe52990e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -83,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="CAdvancedPrototype.cpp">
       <Filter>Source Files\Prototype And MethodFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectPool.cpp">
+      <Filter>Source Files\ObjectPoolPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CString.cpp">
+      <Filter>Source Files\ObjectPoolPattern</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +148,15 @@
     </ClInclude>
     <ClInclude Include="CAdvancedPrototype.h">
       <Filter>Header Files\Prototype And MethodFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectPool.h">
+      <Filter>Header Files\ObjectPoolPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CString.h">
+      <Filter>Header Files\ObjectPoolPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="objectPool.h">
+      <Filter>Header Files\ObjectPoolPattern</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

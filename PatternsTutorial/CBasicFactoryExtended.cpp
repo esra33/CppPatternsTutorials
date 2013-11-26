@@ -30,6 +30,7 @@ std::list<IShape*> CBasicFactoryExtended::CreateShapeList(int id)
 			currentShape = CreateShape(currIdVal);
 			if(currentShape)
 			{
+				shapes.push_back(currentShape);
 				id -= currIdVal;
 			}
 		}

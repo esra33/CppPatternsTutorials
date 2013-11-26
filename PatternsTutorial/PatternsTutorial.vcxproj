@@ -83,10 +83,12 @@
     <ClCompile Include="CFactoryMaker.cpp" />
     <ClCompile Include="CharacterArrayReader.cpp" />
     <ClCompile Include="CHexagon.cpp" />
+    <ClCompile Include="CObjectPool.cpp" />
     <ClCompile Include="COctagon.cpp" />
     <ClCompile Include="CPrototype.cpp" />
     <ClCompile Include="CSingleton.cpp" />
     <ClCompile Include="CSquare.cpp" />
+    <ClCompile Include="CString.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -100,13 +102,16 @@
     <ClInclude Include="CFactoryMaker.h" />
     <ClInclude Include="CharacterArrayReader.h" />
     <ClInclude Include="CHexagon.h" />
+    <ClInclude Include="CObjectPool.h" />
     <ClInclude Include="COctagon.h" />
     <ClInclude Include="CPrototype.h" />
     <ClInclude Include="CSingleton.h" />
     <ClInclude Include="CSquare.h" />
+    <ClInclude Include="CString.h" />
     <ClInclude Include="FriendClassHeaders.h" />
     <ClInclude Include="IAbstractFactory.h" />
     <ClInclude Include="IShape.h" />
+    <ClInclude Include="objectPool.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
