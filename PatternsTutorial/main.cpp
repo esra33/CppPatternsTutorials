@@ -19,10 +19,9 @@ public:
 	CFunctionPair(char _name[32], void (*_function) (void)) : function(_function)
 	{
 		short _size = strlen(_name);
+		_size = _size < 32? _size : 32;
+		memset(name,'\0',32*sizeof(char));
 		memcpy(name, _name, _size);
-		if(_size < 32) {
-			name[_size] = '\0';
-		}
 	}
 
 	~CFunctionPair()
