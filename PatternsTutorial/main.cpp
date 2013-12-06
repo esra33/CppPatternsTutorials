@@ -7,6 +7,11 @@
 #include "CAdvancedPrototype.h"
 #include "CString.h"
 #include "objectPool.h"
+#include "ChainOfCommandImp1.h"
+#include "ChainOfCommandImp2.h"
+#include "CReceiver.h"
+#include "ICommand.h"
+#include "CInvoker.h"
 #include <iostream>
 #include <stdio.h>
 
@@ -30,6 +35,9 @@ public:
 	}
 };
 
+//---------------------------------
+// Creational Design Patterns:
+//---------------------------------
 void SingletonInstance() 
 {
 	char* stream = new char[100];
@@ -100,6 +108,7 @@ void BuilderPatternInstance()
 }
 void PrototypePatternInstance()
 {
+	// using method factory pattern -->http://www.oodesign.com/factory-method-pattern.html 
 	// using the builder pattern -->http://www.oodesign.com/prototype-pattern.html
 	CAdvancedPrototype* prototype = new CAdvancedPrototype(5,"NuevoPrototipo", 0xFF0FF000, true);
 	CPrototype* prototypeClone = prototype->Clone();
@@ -110,6 +119,7 @@ void PrototypePatternInstance()
 
 void ObjectPoolPattern()
 {
+	// using the object pool pattern -->http://www.oodesign.com/object-pool-pattern.html
 	// statical declaration for memory management
 	CObjectPool<CString> objectPool = CObjectPool<CString>(-1);
 	CString* string = objectPool.GetInstance();
@@ -123,6 +133,33 @@ void ObjectPoolPattern()
 	objectPool.Release(&string2);
 }
 
+//---------------------------------
+// Behavioral Design Patterns:
+//---------------------------------
+void ChainOfCommandPattern()
+{
+	// using the builder pattern -->http://www.oodesign.com/chain-of-responsibility-pattern.html
+	char string[] = "Esta es una prueva para ver si esto funciona";
+	ChainOfCommandImp1 lastPass;
+	ChainOfCommandImp2 secondPass = ChainOfCommandImp2(&lastPass);
+	ChainOfCommandImp2 firstPass = ChainOfCommandImp2(&secondPass);
+
+	char* pstring = string;
+	firstPass.excecuteCommand(&pstring);
+}
+
+//---------------------------------
+// Command Pattern
+//---------------------------------
+void CommandPattern()
+{
+	// using the builder pattern -->http://www.oodesign.com/command-pattern.html
+	CInvoker invoker;
+	CReceiver reciever = CReceiver("prueva");
+	invoker.AddAndExecuteCommand(new ICommand(&reciever, &CReceiver::WriteMessageAsNumbers));
+	invoker.AddAndExecuteCommand(new ICommand(&reciever, &CReceiver::WriteMessageAsUpercase));
+}
+
 int main()
 {
 	CFunctionPair* pairs [] = 
@@ -132,7 +169,9 @@ int main()
 		new CFunctionPair("2.Abstract_Factory", ExtendedFactoryPatternInstance), 
 		new CFunctionPair("3.Builder_Instance", BuilderPatternInstance),
 		new CFunctionPair("4.Prototype_Instance", PrototypePatternInstance),
-		new CFunctionPair("5.Object_Pool_Instance", ObjectPoolPattern)
+		new CFunctionPair("5.Object_Pool_Instance", ObjectPoolPattern),
+		new CFunctionPair("6.Chain_of_command", ChainOfCommandPattern),
+		new CFunctionPair("7.Command_Pattern", CommandPattern)
 	};
 
 	short selection = 0;
@@ -160,9 +199,12 @@ int main()
 	}
 
 	// Clean memory
+	CFunctionPair** ptr = pairs;
+
 	for(short i = 0; i < _size; i++)
 	{
-		delete pairs[i];
+		delete (*ptr);
+		ptr++;
 	}
 
 	return 0;

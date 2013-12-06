@@ -46,6 +46,18 @@
     <Filter Include="Source Files\ObjectPoolPattern">
       <UniqueIdentifier>{ac3e5a6a-968d-4299-ad69-32fbe52990e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ChainOfCommand">
+      <UniqueIdentifier>{ed6545bf-80ca-4085-a7b1-dbabc1081ae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ChainOfCommand">
+      <UniqueIdentifier>{7eb233ca-eaf5-4db0-8757-4325375a3c33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Command Pattern">
+      <UniqueIdentifier>{143e4817-f8de-47f7-821f-3d1616b783fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Command Pattern">
+      <UniqueIdentifier>{3bf7b55e-9e03-41ee-b06f-11b951fb1d2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -95,6 +107,24 @@
     </ClCompile>
     <ClCompile Include="CString.cpp">
       <Filter>Source Files\ObjectPoolPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainOfCommand.cpp">
+      <Filter>Source Files\ChainOfCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainOfCommandImp1.cpp">
+      <Filter>Source Files\ChainOfCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainOfCommandImp2.cpp">
+      <Filter>Source Files\ChainOfCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="CReceiver.cpp">
+      <Filter>Source Files\Command Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ICommand.cpp">
+      <Filter>Source Files\Command Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CInvoker.cpp">
+      <Filter>Source Files\Command Pattern</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +187,24 @@
     </ClInclude>
     <ClInclude Include="objectPool.h">
       <Filter>Header Files\ObjectPoolPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ChainOfCommand.h">
+      <Filter>Header Files\ChainOfCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="ChainOfCommandImp1.h">
+      <Filter>Header Files\ChainOfCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="ChainOfCommandImp2.h">
+      <Filter>Header Files\ChainOfCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="CReceiver.h">
+      <Filter>Header Files\Command Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommand.h">
+      <Filter>Header Files\Command Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CInvoker.h">
+      <Filter>Header Files\Command Pattern</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

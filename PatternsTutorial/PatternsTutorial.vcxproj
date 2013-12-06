@@ -81,14 +81,20 @@
     <ClCompile Include="CBasicFactoryExtended.cpp" />
     <ClCompile Include="CCircle.cpp" />
     <ClCompile Include="CFactoryMaker.cpp" />
+    <ClCompile Include="ChainOfCommand.cpp" />
+    <ClCompile Include="ChainOfCommandImp1.cpp" />
+    <ClCompile Include="ChainOfCommandImp2.cpp" />
     <ClCompile Include="CharacterArrayReader.cpp" />
     <ClCompile Include="CHexagon.cpp" />
+    <ClCompile Include="CInvoker.cpp" />
     <ClCompile Include="CObjectPool.cpp" />
     <ClCompile Include="COctagon.cpp" />
     <ClCompile Include="CPrototype.cpp" />
+    <ClCompile Include="CReceiver.cpp" />
     <ClCompile Include="CSingleton.cpp" />
     <ClCompile Include="CSquare.cpp" />
     <ClCompile Include="CString.cpp" />
+    <ClCompile Include="ICommand.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -100,16 +106,22 @@
     <ClInclude Include="CBasicFactoryExtended.h" />
     <ClInclude Include="CCircle.h" />
     <ClInclude Include="CFactoryMaker.h" />
+    <ClInclude Include="ChainOfCommand.h" />
+    <ClInclude Include="ChainOfCommandImp1.h" />
+    <ClInclude Include="ChainOfCommandImp2.h" />
     <ClInclude Include="CharacterArrayReader.h" />
     <ClInclude Include="CHexagon.h" />
+    <ClInclude Include="CInvoker.h" />
     <ClInclude Include="CObjectPool.h" />
     <ClInclude Include="COctagon.h" />
     <ClInclude Include="CPrototype.h" />
+    <ClInclude Include="CReceiver.h" />
     <ClInclude Include="CSingleton.h" />
     <ClInclude Include="CSquare.h" />
     <ClInclude Include="CString.h" />
     <ClInclude Include="FriendClassHeaders.h" />
     <ClInclude Include="IAbstractFactory.h" />
+    <ClInclude Include="ICommand.h" />
     <ClInclude Include="IShape.h" />
     <ClInclude Include="objectPool.h" />
   </ItemGroup>
