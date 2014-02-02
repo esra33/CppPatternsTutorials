@@ -12,6 +12,9 @@
 #include "CReceiver.h"
 #include "ICommand.h"
 #include "CInvoker.h"
+#include "InterpreterBinary.h"
+#include "InterpreterContext.h"
+#include "InterpreterHex.h"
 #include <iostream>
 #include <stdio.h>
 
@@ -148,9 +151,6 @@ void ChainOfCommandPattern()
 	firstPass.excecuteCommand(&pstring);
 }
 
-//---------------------------------
-// Command Pattern
-//---------------------------------
 void CommandPattern()
 {
 	// using the builder pattern -->http://www.oodesign.com/command-pattern.html
@@ -158,6 +158,26 @@ void CommandPattern()
 	CReceiver reciever = CReceiver("prueva");
 	invoker.AddAndExecuteCommand(new ICommand(&reciever, &CReceiver::WriteMessageAsNumbers));
 	invoker.AddAndExecuteCommand(new ICommand(&reciever, &CReceiver::WriteMessageAsUpercase));
+}
+
+void InterpreterPattern()
+{
+	int val;
+	std::cout << "Enter Value\n";
+	std::cin >> val;
+	std::cout << "processing... \n";
+
+	InterpreterContext context = InterpreterContext(val);
+	InterpreterBinary interpreterA;
+	InterpreterHex interpreterB;
+
+	printf("Value in binary is: ");
+	interpreterA.Interpret(&context);
+	context.FlushInterpretedOutput();
+
+	printf("Value in hex is: ");
+	interpreterB.Interpret(&context);
+	context.FlushInterpretedOutput();
 }
 
 int main()
@@ -171,7 +191,8 @@ int main()
 		new CFunctionPair("4.Prototype_Instance", PrototypePatternInstance),
 		new CFunctionPair("5.Object_Pool_Instance", ObjectPoolPattern),
 		new CFunctionPair("6.Chain_of_command", ChainOfCommandPattern),
-		new CFunctionPair("7.Command_Pattern", CommandPattern)
+		new CFunctionPair("7.Command_Pattern", CommandPattern),
+		new CFunctionPair("8.Interpreter_Pattern", InterpreterPattern)
 	};
 
 	short selection = 0;

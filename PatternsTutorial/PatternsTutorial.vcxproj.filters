@@ -58,6 +58,12 @@
     <Filter Include="Source Files\Command Pattern">
       <UniqueIdentifier>{3bf7b55e-9e03-41ee-b06f-11b951fb1d2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\InterpreterPattern">
+      <UniqueIdentifier>{e14d2556-5ed5-42ec-9039-4fb2eafbecc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterpreterPattern">
+      <UniqueIdentifier>{91c04eea-709c-45ac-b191-9398bff8df96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -126,6 +132,15 @@
     <ClCompile Include="CInvoker.cpp">
       <Filter>Source Files\Command Pattern</Filter>
     </ClCompile>
+    <ClCompile Include="InterpreterContext.cpp">
+      <Filter>Source Files\InterpreterPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="InterpreterBinary.cpp">
+      <Filter>Source Files\InterpreterPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="InterpreterHex.cpp">
+      <Filter>Source Files\InterpreterPattern</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IShape.h">
@@ -140,14 +155,8 @@
     <ClInclude Include="CHexagon.h">
       <Filter>Header Files\BasicShapes</Filter>
     </ClInclude>
-    <ClInclude Include="FriendClassHeaders.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="COctagon.h">
       <Filter>Header Files\BasicShapes</Filter>
-    </ClInclude>
-    <ClInclude Include="IAbstractFactory.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ArrayDecoderBuilder.h">
       <Filter>Header Files\BuilderPattern</Filter>
@@ -205,6 +214,24 @@
     </ClInclude>
     <ClInclude Include="CInvoker.h">
       <Filter>Header Files\Command Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="InterpreterInterface.h">
+      <Filter>Header Files\InterpreterPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="InterpreterContext.h">
+      <Filter>Header Files\InterpreterPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="InterpreterBinary.h">
+      <Filter>Header Files\InterpreterPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="InterpreterHex.h">
+      <Filter>Header Files\InterpreterPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="FriendClassHeaders.h">
+      <Filter>Header Files\FactoryPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="IAbstractFactory.h">
+      <Filter>Header Files\FactoryPattern</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

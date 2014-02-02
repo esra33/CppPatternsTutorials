@@ -95,6 +95,9 @@
     <ClCompile Include="CSquare.cpp" />
     <ClCompile Include="CString.cpp" />
     <ClCompile Include="ICommand.cpp" />
+    <ClCompile Include="InterpreterBinary.cpp" />
+    <ClCompile Include="InterpreterContext.cpp" />
+    <ClCompile Include="InterpreterHex.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +125,10 @@
     <ClInclude Include="FriendClassHeaders.h" />
     <ClInclude Include="IAbstractFactory.h" />
     <ClInclude Include="ICommand.h" />
+    <ClInclude Include="InterpreterBinary.h" />
+    <ClInclude Include="InterpreterContext.h" />
+    <ClInclude Include="InterpreterHex.h" />
+    <ClInclude Include="InterpreterInterface.h" />
     <ClInclude Include="IShape.h" />
     <ClInclude Include="objectPool.h" />
   </ItemGroup>
