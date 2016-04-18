@@ -15,6 +15,23 @@
 #include "InterpreterBinary.h"
 #include "InterpreterContext.h"
 #include "InterpreterHex.h"
+#include "binaryTreeIterator.h"
+#include "binaryTree.h"
+#include "CMediator.h"
+#include "CFizzObserver.h"
+#include "CFazzObserver.h"
+#include "CObservedComponent.h"
+#include "CGenericObserver.h"
+#include "StrategyCompilation.h"
+#include "TemplateImplementation.h"
+#include "CConcreteVisitor.h"
+#include "CShapeCollection.h"
+#include "CAsciiAdapter.h"
+#include "CRedShape.h"
+#include "CBlueShape.h"
+#include "CComposite.h"
+#include "decorators.h"
+#include "CTutorialMeshFactory.h"
 #include <iostream>
 #include <stdio.h>
 
@@ -112,7 +129,7 @@ void BuilderPatternInstance()
 void PrototypePatternInstance()
 {
 	// using method factory pattern -->http://www.oodesign.com/factory-method-pattern.html 
-	// using the builder pattern -->http://www.oodesign.com/prototype-pattern.html
+	// using the prototype pattern -->http://www.oodesign.com/prototype-pattern.html
 	CAdvancedPrototype* prototype = new CAdvancedPrototype(5,"NuevoPrototipo", 0xFF0FF000, true);
 	CPrototype* prototypeClone = prototype->Clone();
 	prototypeClone->PrintPrototype();
@@ -162,6 +179,7 @@ void CommandPattern()
 
 void InterpreterPattern()
 {
+	// using the interpreter pattern -->http://www.oodesign.com/interpreter-pattern.html
 	int val;
 	std::cout << "Enter Value\n";
 	std::cin >> val;
@@ -180,19 +198,214 @@ void InterpreterPattern()
 	context.FlushInterpretedOutput();
 }
 
+void IteratorPattern()
+{
+	// using the Iterator pattern -->http://www.oodesign.com/iterator-pattern.html
+	char input[32];
+	std::cout << "Enter 32 char\n";
+	std::cin >> input;
+	std::cout << "Processing... \n\n";
+
+	CBinaryTree<char>* binaryTree = new CBinaryTree<char>();
+	binaryTree->ParseCharArray(input);
+	binaryTree->PrintTree();
+
+	delete binaryTree;
+}
+
+void MediatorPattern()
+{
+	// using the mediator pattern -->http://www.oodesign.com/mediator-pattern.html
+	CMediator mediator;
+	mediator.PrintConcreteCollegue1then2();
+	printf("\n\n");
+	mediator.PrintConcreteCollegue2then1();
+}
+
+void ObserverPattern()
+{
+	// using the observer pattern -->http://www.oodesign.com/observer-pattern.html
+	CObservedComponent observerComponent = CObservedComponent(100);
+	CFizzObserver observerA;
+	CFazzObserver observerB;
+	CGenericObserver observerC = CGenericObserver(5, "Cinco");
+	observerComponent.AddObserver(&observerA);
+	observerComponent.AddObserver(&observerB);
+	observerComponent.AddObserver(&observerC);
+	observerComponent.Flush();
+}
+
+void StrategyPattern()
+{
+	// using the strategy pattern -->http://www.oodesign.com/strategy-pattern.html
+
+	// heap
+	CAddStrategy add;
+	CSubtractStrategy subtract;
+	CMultiplyStrategy multiply;
+
+	// stack
+	CStrategyContext* context = new CStrategyContext(10, 20, &add);
+	
+	// Print add
+	context->PrintResult();
+
+	// Print Subtraction
+	context->ChangeStrategy(&subtract);
+	context->PrintResult();
+
+	// Print Multiplication
+	context->ChangeStrategy(&multiply);
+	context->PrintResult();
+
+	delete context;
+}
+
+void TemplatePattern()
+{
+	// using the template pattern -->http://www.oodesign.com/template-method-pattern.html
+	BaseTemplate* story = new TemplateImplementation();
+
+	story->ExecuteTemplate();
+
+	delete story;
+}
+
+void VisitorPattern()
+{
+	// using the visitor pattern -->http://www.oodesign.com/visitor-pattern.html
+	CBook book = CBook(3);
+	CConcreteVisitor* visitor = new CConcreteVisitor();
+	book.Accept(visitor);
+
+	visitor->Flush();
+	delete visitor;
+}
+
+void NullObjectPattern()
+{
+	// using the Null Object Pattern -->http://www.oodesign.com/null-object-pattern.html
+	CShapeCollection collection;
+	int args[6] = {1, 2, 3, 4, 5, 6};
+	int count = sizeof(args)/sizeof(*args);
+	collection.ProduceShapes(args, count);
+	collection.PrintShapes();
+} 
+
+//-------------------------------------------
+// Structural Patterns
+//-------------------------------------------
+
+// Adapter Client
+void AdapterPattern()
+{
+	// using the Adapter Pattern -->http://www.oodesign.com/adapter-pattern.html
+	int elements[6] = {48, 51, 53, 55, 58, 57};
+
+	CAsciiAdapter adapter;
+
+	for(int i = 0; i < 6; i++)
+	{
+		printf(adapter.ReadAsciiNumber(elements[i]));
+	}
+}
+
+// Briedge Client
+void BriedgePattern()
+{
+	// using the Briedge Pattern -->http://www.oodesign.com/bridge-pattern.html
+	IShapedColor* shapedColors[2] = {new CRedShape(0), new CBlueShape(3)};
+	int size = sizeof(shapedColors)/sizeof(IShapedColor*);
+	for(int i = 0; i < size; ++i)
+	{
+		shapedColors[i]->Print();
+	}
+}
+
+// Composite Client
+void CompositePattern()
+{
+	// using the Composite Pattern -->http://www.oodesign.com/composite-pattern.html
+	IAbstractFactory* factory1 = CFactoryMaker::createFactory(factoryType::basicFactory);
+	IAbstractFactory* factory2 = CFactoryMaker::createFactory(factoryType::extendedFactory);
+	
+	IShape* shape1 = factory1->CreateShape(1);
+	IShape* shape2 = factory1->CreateShape(2);
+	IShape* shape3 = factory2->CreateShape(1);
+	IShape* shape4 = factory2->CreateShape(2);
+
+	CComposite composite1;
+	CComposite* composite2 = new CComposite();
+
+	composite1.Add(shape1);
+	composite1.Add(composite2);
+	composite1.Add(shape3);
+	composite2->Add(shape4);
+	composite2->Add(shape2);
+
+	composite1.Draw();
+}
+
+// Decorator Client
+void DecoratorPattern()
+{
+	// using the Decorator Pattern -->http://www.oodesign.com/decorator-pattern.html
+	CBasicFactory factory;
+	IShape* shape1 = (IShape*)new CReflectiveDecorator((IShape*)new CColorDecorator(factory.CreateShape(1), "Red"), true);
+	IShape* shape2 = (IShape*)new CColorDecorator(factory.CreateShape(2), "Blue");
+
+	shape1->Draw();
+	printf("\n");
+	shape2->Draw();
+
+	delete shape1;
+	delete shape2;
+}
+
+// Flyweight client
+void FlyweightPattern()
+{
+	// using the Flyweight Pattern-->http://www.oodesign.com/flyweight-pattern.html
+	CTutorialMeshFactory meshFactory;
+
+	IMesh* meshA	= meshFactory.CreateMeshInstance("meshA");
+	IMesh* meshB	= meshFactory.CreateMeshInstance("meshB");
+	IMesh* meshC	= meshFactory.CreateMeshInstance("circleMesh");
+	IMesh* meshA2	= meshFactory.CreateMeshInstance("meshA");
+
+	meshA->Draw();
+	meshB->Draw();
+	meshC->Draw();
+	meshA2->Draw();
+
+	printf("Same Pointer %s\n", meshA == meshA2? "true" : "false");
+}
+
 int main()
 {
 	CFunctionPair* pairs [] = 
 	{
-		new CFunctionPair("0.Singleton_Instance", SingletonInstance), 
-		new CFunctionPair("1.Factory_Instance", FactoryPatternInstance), 
-		new CFunctionPair("2.Abstract_Factory", ExtendedFactoryPatternInstance), 
-		new CFunctionPair("3.Builder_Instance", BuilderPatternInstance),
-		new CFunctionPair("4.Prototype_Instance", PrototypePatternInstance),
+		new CFunctionPair("0.Singleton_Instance",	SingletonInstance), 
+		new CFunctionPair("1.Factory_Instance",		FactoryPatternInstance), 
+		new CFunctionPair("2.Abstract_Factory",		ExtendedFactoryPatternInstance), 
+		new CFunctionPair("3.Builder_Instance",		BuilderPatternInstance),
+		new CFunctionPair("4.Prototype_Instance",	PrototypePatternInstance),
 		new CFunctionPair("5.Object_Pool_Instance", ObjectPoolPattern),
-		new CFunctionPair("6.Chain_of_command", ChainOfCommandPattern),
-		new CFunctionPair("7.Command_Pattern", CommandPattern),
-		new CFunctionPair("8.Interpreter_Pattern", InterpreterPattern)
+		new CFunctionPair("6.Chain_of_command",		ChainOfCommandPattern),
+		new CFunctionPair("7.Command_Pattern",		CommandPattern),
+		new CFunctionPair("8.Interpreter_Pattern",	InterpreterPattern),
+		new CFunctionPair("9.Iterator_Pattern",		IteratorPattern),
+		new CFunctionPair("10.Mediator_Pattern",	MediatorPattern),
+		new CFunctionPair("11.Observer_Pattern",	ObserverPattern),
+		new CFunctionPair("12.Strategy_Pattern",	StrategyPattern),
+		new CFunctionPair("13.Template_Pattern",	TemplatePattern),
+		new CFunctionPair("14.Visitor_Pattern",		VisitorPattern),
+		new CFunctionPair("15.Null_Object_Pattern",	NullObjectPattern),
+		new CFunctionPair("16.Adapter_Pattern",		AdapterPattern),
+		new CFunctionPair("17.Bridge_Pattern",		BriedgePattern),
+		new CFunctionPair("18.Composite_Pattern",	CompositePattern),
+		new CFunctionPair("19.Decorator_Pattern",	DecoratorPattern),
+		new CFunctionPair("20.Flyweight_Pattern",	FlyweightPattern)
 	};
 
 	short selection = 0;

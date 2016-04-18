@@ -52,17 +52,98 @@
     <Filter Include="Source Files\ChainOfCommand">
       <UniqueIdentifier>{7eb233ca-eaf5-4db0-8757-4325375a3c33}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Command Pattern">
-      <UniqueIdentifier>{143e4817-f8de-47f7-821f-3d1616b783fe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Command Pattern">
-      <UniqueIdentifier>{3bf7b55e-9e03-41ee-b06f-11b951fb1d2e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\InterpreterPattern">
       <UniqueIdentifier>{e14d2556-5ed5-42ec-9039-4fb2eafbecc2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\InterpreterPattern">
       <UniqueIdentifier>{91c04eea-709c-45ac-b191-9398bff8df96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Iterator">
+      <UniqueIdentifier>{b6f3b62e-90cb-41b5-aa4f-36820c712c01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Iterator">
+      <UniqueIdentifier>{07cff450-fc63-49d5-8d42-d55743ae22b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mediator">
+      <UniqueIdentifier>{68e3b20e-aacd-4545-9240-6fd7aa5ddb9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mediator">
+      <UniqueIdentifier>{e526eb43-b8b4-4a6c-9ba1-c33bc3174ca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Observer">
+      <UniqueIdentifier>{0daf6559-b002-4a20-bc16-4d75ee826dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Observer">
+      <UniqueIdentifier>{d57cbadc-7849-4a49-b557-8503f903b9df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Strategy">
+      <UniqueIdentifier>{8fe1e3a9-0e3b-4789-abe1-919e92410f14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Strategy">
+      <UniqueIdentifier>{0b6b6b03-e15d-451d-87eb-d5ebc0c80a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TemplatePattern">
+      <UniqueIdentifier>{1de9a984-e038-4889-8337-c273489d0d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TemplatePattern">
+      <UniqueIdentifier>{3f81d8c6-3121-4e19-8af4-31d73a43882f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Visitor">
+      <UniqueIdentifier>{cfd01139-3474-4339-80c7-cdbee8b5d8cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Visitor">
+      <UniqueIdentifier>{78f73644-5564-49c0-8bac-f2b381c1dbbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NullObjectPattern">
+      <UniqueIdentifier>{dee5b894-4b0b-4823-aabd-de33f83f6bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CommandPattern">
+      <UniqueIdentifier>{143e4817-f8de-47f7-821f-3d1616b783fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CommandPattern">
+      <UniqueIdentifier>{3bf7b55e-9e03-41ee-b06f-11b951fb1d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NullObjectPattern">
+      <UniqueIdentifier>{c368c8d4-ed61-48bf-ab48-193bd540be74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AdapterPattern">
+      <UniqueIdentifier>{2977d11a-c58a-41b4-9f1c-df569222076a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AdapterPattern">
+      <UniqueIdentifier>{b3447734-5441-4a4f-a065-5074fe36abda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BridgePattern">
+      <UniqueIdentifier>{1808e348-eb78-4b83-9e05-98e1dfb32ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BridgePattern">
+      <UniqueIdentifier>{e11db36e-062c-43cd-824a-2dedca4252a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CompositPattern">
+      <UniqueIdentifier>{2ca566d5-8087-40f1-9642-5d942aa85c8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CompositPattern">
+      <UniqueIdentifier>{fa901ac8-9376-4be8-9aa0-2c41b560f502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DecoratorPattern">
+      <UniqueIdentifier>{b1a86774-e2fb-4b41-9fdd-4471286f4c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DecoratorPattern">
+      <UniqueIdentifier>{ff70c6ee-59cc-4a50-9518-4c7fde4ae03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FlyweightPattern">
+      <UniqueIdentifier>{df94bd34-ae6d-478c-89e0-1b3069f5d369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FlyweightPattern\FlyweightFactory">
+      <UniqueIdentifier>{b27960e4-01d3-4b2f-8a5a-5e65f246ca59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FlyweightPattern">
+      <UniqueIdentifier>{d4afd4c9-f704-4237-8c1c-3f8cbf9dc079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FlyweightPattern\FlyweightFactory">
+      <UniqueIdentifier>{eecb22d1-f417-4e39-9882-fd1bde147850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MementoPattern">
+      <UniqueIdentifier>{d4499caa-74a9-4c27-9e19-87f1071251bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -124,13 +205,13 @@
       <Filter>Source Files\ChainOfCommand</Filter>
     </ClCompile>
     <ClCompile Include="CReceiver.cpp">
-      <Filter>Source Files\Command Pattern</Filter>
+      <Filter>Source Files\CommandPattern</Filter>
     </ClCompile>
     <ClCompile Include="ICommand.cpp">
-      <Filter>Source Files\Command Pattern</Filter>
+      <Filter>Source Files\CommandPattern</Filter>
     </ClCompile>
     <ClCompile Include="CInvoker.cpp">
-      <Filter>Source Files\Command Pattern</Filter>
+      <Filter>Source Files\CommandPattern</Filter>
     </ClCompile>
     <ClCompile Include="InterpreterContext.cpp">
       <Filter>Source Files\InterpreterPattern</Filter>
@@ -140,6 +221,111 @@
     </ClCompile>
     <ClCompile Include="InterpreterHex.cpp">
       <Filter>Source Files\InterpreterPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CBinaryTree.cpp">
+      <Filter>Source Files\Iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="CBinaryTreeIterator.cpp">
+      <Filter>Source Files\Iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpingFunctions.cpp">
+      <Filter>Source Files\Iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="CMediator.cpp">
+      <Filter>Source Files\Mediator</Filter>
+    </ClCompile>
+    <ClCompile Include="CObservedComponent.cpp">
+      <Filter>Source Files\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="CFizzObserver.cpp">
+      <Filter>Source Files\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="CFazzObserver.cpp">
+      <Filter>Source Files\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="CGenericObserver.cpp">
+      <Filter>Source Files\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="CStrategyContext.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="CAddStrategy.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="CMultiplyStrategy.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="CSubtractStrategy.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateImplementation.cpp">
+      <Filter>Source Files\TemplatePattern</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseTemplate.cpp">
+      <Filter>Source Files\TemplatePattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CBook.cpp">
+      <Filter>Source Files\Visitor</Filter>
+    </ClCompile>
+    <ClCompile Include="CPage.cpp">
+      <Filter>Source Files\Visitor</Filter>
+    </ClCompile>
+    <ClCompile Include="CParagraph.cpp">
+      <Filter>Source Files\Visitor</Filter>
+    </ClCompile>
+    <ClCompile Include="CConcreteVisitor.cpp">
+      <Filter>Source Files\Visitor</Filter>
+    </ClCompile>
+    <ClCompile Include="CNullObjectShape.cpp">
+      <Filter>Source Files\NullObjectPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CShapeCollection.cpp">
+      <Filter>Source Files\NullObjectPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CAsciiNumber.cpp">
+      <Filter>Source Files\AdapterPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CAsciiAdapter.cpp">
+      <Filter>Source Files\AdapterPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="IShapedColor.cpp">
+      <Filter>Source Files\BridgePattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CBlueShape.cpp">
+      <Filter>Source Files\BridgePattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CRedShape.cpp">
+      <Filter>Source Files\BridgePattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CComposite.cpp">
+      <Filter>Source Files\CompositPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="IShapeDecorator.cpp">
+      <Filter>Source Files\DecoratorPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CColorDecorator.cpp">
+      <Filter>Source Files\DecoratorPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CReflectiveDecorator.cpp">
+      <Filter>Source Files\DecoratorPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CMesh.cpp">
+      <Filter>Source Files\FlyweightPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircleMesh.cpp">
+      <Filter>Source Files\FlyweightPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="CConcreteMeshFactory.cpp">
+      <Filter>Source Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="CConcreteCircleMeshFactory.cpp">
+      <Filter>Source Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeshFactoryMaker.cpp">
+      <Filter>Source Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="CTutorialMeshFactory.cpp">
+      <Filter>Source Files\FlyweightPattern\FlyweightFactory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -207,13 +393,13 @@
       <Filter>Header Files\ChainOfCommand</Filter>
     </ClInclude>
     <ClInclude Include="CReceiver.h">
-      <Filter>Header Files\Command Pattern</Filter>
+      <Filter>Header Files\CommandPattern</Filter>
     </ClInclude>
     <ClInclude Include="ICommand.h">
-      <Filter>Header Files\Command Pattern</Filter>
+      <Filter>Header Files\CommandPattern</Filter>
     </ClInclude>
     <ClInclude Include="CInvoker.h">
-      <Filter>Header Files\Command Pattern</Filter>
+      <Filter>Header Files\CommandPattern</Filter>
     </ClInclude>
     <ClInclude Include="InterpreterInterface.h">
       <Filter>Header Files\InterpreterPattern</Filter>
@@ -232,6 +418,156 @@
     </ClInclude>
     <ClInclude Include="IAbstractFactory.h">
       <Filter>Header Files\FactoryPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="IIterator.h">
+      <Filter>Header Files\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="CBinaryTree.h">
+      <Filter>Header Files\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="CBinaryTreeIterator.h">
+      <Filter>Header Files\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="binaryTree.h">
+      <Filter>Header Files\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="binaryTreeIterator.h">
+      <Filter>Header Files\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpingFunctions.h">
+      <Filter>Header Files\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="CMediator.h">
+      <Filter>Header Files\Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="CObservedComponent.h">
+      <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="IObserver.h">
+      <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="CFizzObserver.h">
+      <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="CFazzObserver.h">
+      <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="CGenericObserver.h">
+      <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="IStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="IStrategyDataHolder.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="CStrategyContext.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="CAddStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="CSubtractStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="CMultiplyStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyCompilation.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTemplate.h">
+      <Filter>Header Files\TemplatePattern</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateImplementation.h">
+      <Filter>Header Files\TemplatePattern</Filter>
+    </ClInclude>
+    <ClInclude Include="IVisitor.h">
+      <Filter>Header Files\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="IVisitable.h">
+      <Filter>Header Files\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="CBook.h">
+      <Filter>Header Files\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="CPage.h">
+      <Filter>Header Files\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="CParagraph.h">
+      <Filter>Header Files\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="CConcreteVisitor.h">
+      <Filter>Header Files\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="CNullObjectShape.h">
+      <Filter>Header Files\NullObjectPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CShapeCollection.h">
+      <Filter>Header Files\NullObjectPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CAsciiNumber.h">
+      <Filter>Header Files\AdapterPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CAsciiString.h">
+      <Filter>Header Files\AdapterPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CAsciiAdapter.h">
+      <Filter>Header Files\AdapterPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="IColor.h">
+      <Filter>Header Files\BridgePattern</Filter>
+    </ClInclude>
+    <ClInclude Include="IShapedColor.h">
+      <Filter>Header Files\BridgePattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CBlueShape.h">
+      <Filter>Header Files\BridgePattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CRedShape.h">
+      <Filter>Header Files\BridgePattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CComposite.h">
+      <Filter>Header Files\CompositPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="IShapeDecorator.h">
+      <Filter>Header Files\DecoratorPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CColorDecorator.h">
+      <Filter>Header Files\DecoratorPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CReflectiveDecorator.h">
+      <Filter>Header Files\DecoratorPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="decorators.h">
+      <Filter>Header Files\DecoratorPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CMesh.h">
+      <Filter>Header Files\FlyweightPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CCircleMesh.h">
+      <Filter>Header Files\FlyweightPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="IAbstractMeshFactory.h">
+      <Filter>Header Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="CConcreteMeshFactory.h">
+      <Filter>Header Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="CConcreteCircleMeshFactory.h">
+      <Filter>Header Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="CMeshFactoryMaker.h">
+      <Filter>Header Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="IMesh.h">
+      <Filter>Header Files\FlyweightPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="CTutorialMeshFactory.h">
+      <Filter>Header Files\FlyweightPattern\FlyweightFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="CMemento.h">
+      <Filter>Header Files\MementoPattern</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
